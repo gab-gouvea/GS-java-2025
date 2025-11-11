@@ -30,4 +30,10 @@ public class Inscricao {
 
     @Enumerated(EnumType.STRING)
     private Status status;
+
+    public Inscricao(Usuario usuario, TrilhaAprendizado trilhaAprendizado, Status status) {
+        this.usuario = usuario;
+        this.trilhaAprendizado = trilhaAprendizado;
+        this.status = status;
+    }
 }

@@ -5,8 +5,8 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
 public record CreateInscricaoData(
-        @NotBlank String usuario_id,
-        @NotBlank String trilha_id,
-        @NotNull Status status
+        @NotBlank Long usuario_id,
+        @NotBlank Long trilha_id
+
 ) {
 }
