@@ -36,4 +36,10 @@ public class Inscricao {
         this.trilhaAprendizado = trilhaAprendizado;
         this.status = status;
     }
+
+    public void atualizarValores(Usuario usuario, TrilhaAprendizado trilha, Status status) {
+        if (usuario != null) this.usuario = usuario;
+        if (trilha != null) this.trilhaAprendizado = trilha;
+        if (status != null) this.status = status;
+    }
 }

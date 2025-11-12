@@ -32,7 +32,7 @@ public class GlobalExceptionHandler {
 //        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(errorResponse);
 //    }
 
-    @ExceptionHandler({TrilhaNotFoundException.class, UsuarioNotFoundException.class})
+    @ExceptionHandler({TrilhaNotFoundException.class, UsuarioNotFoundException.class, InscricaoNotFoundException.class})
     public ResponseEntity<ErrorResponse> handleNotFoundExceptions(RuntimeException e) {
         ErrorResponse errorResponse = new ErrorResponse(
                 HttpStatus.NOT_FOUND.value(),
