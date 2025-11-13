@@ -5,10 +5,11 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 
 public record CreateUsuarioData(
-        @NotBlank String name,
+        @NotBlank String nome,
         @Email @NotBlank String email,
         @Size(min = 8) @NotBlank String senha,
         String ocupacaoAtual,
-        String objetivoProfissional
+        String objetivoProfissional,
+        @NotBlank String role
 ) {
 }

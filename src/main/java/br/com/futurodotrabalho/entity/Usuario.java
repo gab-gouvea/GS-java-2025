@@ -29,16 +29,18 @@ public class Usuario {
     private String senha;
     private String ocupacaoAtual;
     private String objetivoProfissional;
+    private String role;
 
     @CreatedDate
     private LocalDateTime dataCadastro;
 
-    public Usuario(String name, String email, String senha, String ocupacaoAtual, String objetivoProfissional) {
-        this.nome = name;
+    public Usuario(String nome, String email, String senha, String ocupacaoAtual, String objetivoProfissional, String role) {
+        this.nome = nome;
         this.email = email;
         this.senha = senha;
         this.ocupacaoAtual = ocupacaoAtual;
         this.objetivoProfissional = objetivoProfissional;
+        this.role = role;
     }
 
     public void atualizarValores(UpdateUsuarioData data) {

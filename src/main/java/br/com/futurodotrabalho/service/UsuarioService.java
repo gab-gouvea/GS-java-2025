@@ -27,11 +27,12 @@ public class UsuarioService {
         }
 
         var entity = new Usuario(
-                data.name(),
+                data.nome(),
                 data.email(),
                 data.senha(),
                 data.ocupacaoAtual(),
-                data.objetivoProfissional()
+                data.objetivoProfissional(),
+                data.role()
         );
 
         return usuarioRepository.save(entity);
@@ -39,6 +40,11 @@ public class UsuarioService {
 
     public List<Usuario> buscarTodos() {
         return usuarioRepository.findAll();
+    }
+
+    public Usuario buscarPorNome(String nome) {
+        return usuarioRepository.findByNome(nome)
+                .orElseThrow(() -> new UsuarioNotFoundException("Usuário não encontrado no sistema." + nome));
     }
 
     public Usuario buscarPorId(Long id) {
